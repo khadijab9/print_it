@@ -27,20 +27,21 @@ const bulletParent = document.querySelector(".dots");
 
 let currentSlide = 0;
 
+
 //pour afficher les images du tableau et le tagline
 function showSlide(index) {
 	 // Récupérer l'image et la tagline  correspondante à l'index dans le tableau
 	const slide = slides[index];
 	bannerImage.src = `./assets/images/slideshow/${slide.image}`;
 	tagline.innerHTML = slide.tagLine; 
-}
 
-function updateBullet(index) {
 	const bullets = document.querySelectorAll(".dots .dot");
+	
 	bullets.forEach((bullet) => {
 	  bullet.classList.remove("dot_selected");
 	});
 	bullets[index].classList.add("dot_selected");
+	
   }
 
 // Sélection du point en fonction de la position du slider
